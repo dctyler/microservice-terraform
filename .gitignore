@@ -1,0 +1,38 @@
+# git ignore for java, mac and other files 
+
+
+
+.DS_Store
+
+*.class
+
+bin/
+.settings/
+
+# Eclipse files
+.project
+.classpath
+.metadata/
+
+
+# Maven files
+target/*
+build/*
+.gradle/*
+.settings/*
+.classpath
+.project
+.factorypath
+.attach_pid*
+.idea
+*.iml
+/target
+.sts4-cache/
+.vscode
+_site/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
