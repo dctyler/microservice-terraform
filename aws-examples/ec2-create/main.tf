@@ -27,7 +27,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "app_server" {
-  ami           = "ami-830c94e3"
+  ami           = "ami-0dfcb1ef8550277af"
   instance_type = "t2.micro"
   count = var.instance_count_needed ? var.instance_count : 1
 
