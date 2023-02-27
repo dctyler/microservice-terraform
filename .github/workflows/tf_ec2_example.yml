@@ -34,6 +34,7 @@ jobs:
         role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
         role-duration-seconds: 900 # the ttl of the session, in seconds.
         role-session-name: TfSession
+        mask-aws-account-id: false
         aws-region: us-east-1 # use your region here.
 
     - name: Setup Terraform CLI
