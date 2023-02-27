@@ -22,8 +22,8 @@ jobs:
     name: Terraform Validation and Build
     runs-on: ubuntu-latest
     permissions:
-      id-token: write # required to use OIDC authentication
-      contents: read # required to checkout the code from the repo
+      id-token: write
+      contents: read 
     if:  ${{ inputs.tfpath }} 
     steps: 
     - uses: actions/checkout@v2.5.0
