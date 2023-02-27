@@ -31,11 +31,9 @@ jobs:
     - name: Configure AWS Credentials Action For GitHub Actions
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        permissions:
-          id-token: write # required to use OIDC authentication
-          contents: read # required to checkout the code from the repo
         role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
         role-duration-seconds: 900 # the ttl of the session, in seconds.
+        role-session-name: TfSession
         aws-region: us-east-1 # use your region here.
 
     - name: Setup Terraform CLI
