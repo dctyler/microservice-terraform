@@ -22,7 +22,7 @@ jobs:
       id-token: write
       packages: write
       contents: read 
-    if:  ${{ inputs.tfpath }} 
+    #if:  ${{ inputs.tfpath }} 
     steps: 
      - name: Checkout
        uses: actions/checkout@v2.5.0
