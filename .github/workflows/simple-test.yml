@@ -18,8 +18,7 @@ jobs:
         with:
           role-to-assume: <ROLE_NAME>
           aws-region: ${{ secrets.AWS_REGION }}
-          oidc-provider: ${{ secrets.AWS_OIDC_ISSUER_URL }}
-          client-id: ${{ secrets.AWS_OIDC_CLIENT_ID }}
+          audience: ${{ secrets.AWS_OIDC_CLIENT_ID }}
           role-duration-seconds: 1200
 
       - name: Run Terraform apply
