@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+env:
+  TF_DIR: infra/modules/aws/ec2
 
 jobs:
   deploy:
@@ -31,10 +33,10 @@ jobs:
 
       - name: Run Terraform init
         run: |
-          cd infra/
+          cd $TF_DIR
           terraform init
 
       - name: Run Terraform apply
         run: |
-          cd infra/
+          cd $TF_DIR
           terraform apply -auto-approve
